@@ -1,12 +1,18 @@
-import { ADD_TASK } from '../constants/index';
+import { ADD_TASK, MARK_TASK } from '../constants/index';
 
 const addTask = data => {
-
   return {
     type: ADD_TASK,
     payload: data,
-    generateId: true
+    generateId: true,
   }
 }
 
-export { addTask };
+const markTask = data => {
+  return {
+    type: MARK_TASK,
+    payload: data,
+  }
+}
+
+export { addTask, markTask };

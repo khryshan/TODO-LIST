@@ -1,20 +1,16 @@
 import List from '../components/List';
 import { connect } from 'react-redux';
 
-// import { addTask } from '../actions/tasks';
+import { markTask } from '../actions/tasks';
  
 const mapStateToProps = state => {
-  return {
-    tasks: state.tasks
-  };
+  return { tasks: state.tasks };
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     addTask: (data) => {
-//       dispatch(addTask(data));
-//     }
-//   };
-// }
+const mapDispatchToProps = dispatch => {
+  return {
+    markTask: (data) => { dispatch(markTask(data)); }
+  };
+}
  
-export default connect(mapStateToProps)(List);
+export default connect(mapStateToProps, mapDispatchToProps)(List);

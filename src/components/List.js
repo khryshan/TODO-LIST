@@ -7,13 +7,13 @@ import './todo-list-style.css';
 
 class List extends React.Component {
 
-	constructor(props) {
-    super(props);
+	// constructor(props) {
+  //   super(props);
 
     // this.checkTask = this.checkTask.bind(this);
     // this.editTask = this.editTask.bind(this);
     // this.removeTask = this.removeTask.bind(this);
-  };
+  // };
 
   // checkTask(e) {
   // 	let value = e.currentTarget.parentNode.querySelector('input').id;
@@ -28,13 +28,12 @@ class List extends React.Component {
   // removeTask(e) {
   //  	let value = e.currentTarget.parentNode.querySelector('label').id;
   //  	this.props.deleteTask(value);
-  // };
-  
-
+	// };
+	
+	
   
 	render() {
-		console.log(this.props)
-		const { tasks } = this.props;
+		const { tasks, markTask } = this.props;
 
 		return (
 			tasks.length !== 0 
@@ -43,6 +42,7 @@ class List extends React.Component {
 					<li key={item.id} className="item__block">
 						<Task
 							task={item}
+							markTask={markTask}
 						/>
 					</li>
 				)
