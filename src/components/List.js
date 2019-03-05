@@ -33,7 +33,7 @@ class List extends React.Component {
 	
   
 	render() {
-		const { tasks, markTask } = this.props;
+		const { tasks, markTask, deleteTask } = this.props;
 
 		return (
 			tasks.length !== 0 
@@ -43,6 +43,7 @@ class List extends React.Component {
 						<Task
 							task={item}
 							markTask={markTask}
+							deleteTask={deleteTask}
 						/>
 					</li>
 				)
