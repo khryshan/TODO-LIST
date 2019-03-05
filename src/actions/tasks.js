@@ -4,7 +4,8 @@ const addTask = data => {
 
   return {
     type: ADD_TASK,
-    payload: data
+    payload: data,
+    generateId: true
   }
 }
 
