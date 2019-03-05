@@ -3,7 +3,7 @@ import './add-task-style.css';
 
 
 
-class AddTask extends React.Component {
+class InputTask extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -50,4 +50,4 @@ class AddTask extends React.Component {
 	};
 };
 
-export default AddTask;
+export default InputTask;

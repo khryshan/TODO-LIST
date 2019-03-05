@@ -2,9 +2,10 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import configureStore from '../store/configStore';
 
-import AddTask from '../containers/AddTask.js';
-import ToDoList from './List.js';
-import './app-style.css';
+import Layout from './Layout';
+import InputTask from '../containers/InputTask';
+import List from '../containers/List';
+
 
 const store = configureStore();
 
@@ -82,33 +83,17 @@ class Application extends React.Component {
 
 
 	render() {
-
-		return (
+    return (
       <Provider store={ store }>
-       
-          <div className="app__main-block">
-            <div className="container">
-              <h1 className="app__header">to do <span>list</span></h1>
-                {/* <AddTask
-                  textTask={this.state.text}
-                  handleTextInput={this.handleTextInput}
-                  saveTask={this.saveTask}
-                /> */}
-                <AddTask />
-                {/* <ToDoList
-                  itemsTasks={this.state.items}
-                  checkTasks={this.handleItemDone}
-                  editTask={this.handleItemEdit}
-                  deleteTask={this.handleItemDelete}
-                /> */}
-            </div>
-          </div>
-       
+      
+        <Layout />
+          <InputTask />
+          <List />
+        
       </Provider>
+		)
+  }
 
-			
-		);
-	};
 };
 
 export default Application;

@@ -1,4 +1,4 @@
-import AddTask from '../components/AddTask';
+import InputTask from '../components/InputTask';
 import { connect } from 'react-redux';
 
 import { addTask } from '../actions/tasks';
@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => {
   };
 }
  
-export default connect(null, mapDispatchToProps)(AddTask);
+export default connect(null, mapDispatchToProps)(InputTask);
