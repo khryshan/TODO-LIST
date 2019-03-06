@@ -32,7 +32,7 @@
 }
 
 .item__check:checked + label:before {
-    color: #000;
+    color: #cccccc;
 }
 
 .item__task {
