@@ -80,3 +80,10 @@
 	transform: scale(1.1);
 }
 
+.message {
+	color: #000000;
+	font-size: 20px;
+	font-family: 'Roboto Condensed', 'Arial', sans-serif;
+	font-weight: 300;
+}
+

@@ -2,7 +2,6 @@ import React from 'react';
 import './add-task-style.css';
 
 
-
 class InputTask extends React.Component {
 
 	constructor(props) {
