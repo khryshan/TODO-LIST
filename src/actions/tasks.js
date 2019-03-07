@@ -1,4 +1,4 @@
-import { ADD_TASK, MARK_TASK, DELETE_TASK } from '../constants/index';
+import { ADD_TASK, MARK_TASK, EDIT_TASK, DELETE_TASK } from '../constants/index';
 
 const addTask = data => {
   return {
@@ -15,6 +15,13 @@ const markTask = data => {
   }
 }
 
+const saveEditTask = data => {
+  return {
+    type: EDIT_TASK,
+    payload: data,
+  }
+}
+
 const deleteTask = data => {
   return {
     type: DELETE_TASK,
@@ -22,4 +29,4 @@ const deleteTask = data => {
   }
 }
 
-export { addTask, markTask, deleteTask };
+export { addTask, markTask, saveEditTask, deleteTask };

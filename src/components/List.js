@@ -8,7 +8,7 @@ import './todo-list-style.css';
 
 const List = props => {
 
-		const { tasks, markTask, deleteTask } = props;
+		const { tasks, markTask, deleteTask, saveEditTask } = props;
 
 		return (
 			tasks.length !== 0 
@@ -18,6 +18,7 @@ const List = props => {
 						<Task
 							task={item}
 							markTask={markTask}
+							saveEditTask={saveEditTask}
 							deleteTask={deleteTask}
 						/>
 					</li>

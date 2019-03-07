@@ -32,19 +32,38 @@
 }
 
 .item__check:checked + label:before {
-    color: #cccccc;
+  color: #cccccc;
+}
+.item__task-wrap {
+	display: flex;
+	flex-grow: 1;
 }
 
-.item__task {
+.item__task-wrap-edit {
+	display: flex;
 	flex-grow: 1;
+}
 
-	padding: 10px;
+.item__task-wrap-edit input {
+	flex-grow: 1;
+	margin-right: 5px;
+	padding: 5px 10px;
 
 	color: #000000;
 	font-size: 20px;
 	font-family: 'Roboto Condensed', 'Arial', sans-serif;
 	font-weight: 300;
+	border: none;
+	border-bottom: 1px solid #cccccc;
+}
 
+.item__task {
+	flex-grow: 1;
+	padding: 10px;
+	color: #000000;
+	font-size: 20px;
+	font-family: 'Roboto Condensed', 'Arial', sans-serif;
+	font-weight: 300;
 	border-bottom: 1px solid #cccccc;
 	cursor: pointer;
 }

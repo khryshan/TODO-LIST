@@ -18,6 +18,10 @@ const configureStore = ( initialState = {} ) => {
   const store = createStore(persistedReducer, composeWithDevTools(applyMiddleware(logger, generatorId)));
 
   const persistor = persistStore(store);
+  
+
+  // Temporary disable persist store because of restoring slate editor value issue
+  // persistor.purge();
 
   return { store, persistor };
 }
